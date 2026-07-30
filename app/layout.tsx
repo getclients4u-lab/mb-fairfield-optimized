@@ -1,8 +1,9 @@
-import '@/app/globals.css'
+import './globals.css'
 import type { Metadata } from 'next'
-import JsonLd from '@/components/JsonLd'
+import JsonLd from '../components/JsonLd'
 
 const siteUrl = 'https://www.mercedesbenzoffairfield.com'
+const desc = 'Visit Mercedes-Benz of Fairfield for new and certified pre-owned Mercedes-Benz vehicles, expert service, and financing in Fairfield, CA. Serving Solano County and the Bay Area.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     default: 'Mercedes-Benz of Fairfield | New & Pre-Owned Luxury Vehicles',
     template: '%s | Mercedes-Benz of Fairfield'
   },
-  description: 'Visit Mercedes-Benz of Fairfield for new and certified pre-owned Mercedes-Benz vehicles, expert service, and financing in Fairfield, CA. Serving Solano County and the Bay Area.',
+  description: desc,
   keywords: [
     'Mercedes-Benz dealer Fairfield', 'Mercedes-Benz Fairfield CA',
     'new Mercedes-Benz for sale', 'certified pre-owned Mercedes',
@@ -22,10 +23,10 @@ export const metadata: Metadata = {
     type: 'website', locale: 'en_US', url: siteUrl,
     siteName: 'Mercedes-Benz of Fairfield',
     title: 'Mercedes-Benz of Fairfield | New & Pre-Owned Luxury Vehicles',
-    description,
+    description: desc,
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }]
   },
-  twitter: { card: 'summary_large_image', title: 'Mercedes-Benz of Fairfield', description },
+  twitter: { card: 'summary_large_image', title: 'Mercedes-Benz of Fairfield', description: desc },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } }
 }
 

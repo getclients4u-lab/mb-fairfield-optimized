@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import { generateSchemas } from '@/lib/schema'
+import { generateSchemas } from '../lib/schema'
 
 export default function JsonLd() {
   const schemas = generateSchemas()
